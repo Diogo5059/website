@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<style>
+	.cssbuttons-io-button {
+  background: hsl(159, 65%, 45%);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 15px;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em hsl(159, 65%, 45%);
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 15px;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em hsl(159, 65%, 45%);
+  right: 0.3em;
+  transition: all 0.3s;
+  
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: hsl(159, 65%, 45%);
+  transform: scaleX(-1);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em) scaleX(-1);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+.topRight {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+
+</style>
+<head>
+	<link href="https://www.valdorio.net/templates/g5_hydrogen/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+ 	<meta charset="UTF-8" />
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 	<title>Val do Rio | PAP</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="topRight">
+	<button class="cssbuttons-io-button" onclick="window.location.href='home.html';"> Voltar
+		<div class="icon">
+		  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+		</div>
+	  </button>
+	  </div>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="img/bg.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<img src="img/avatar.svg">
+				<h2 class="title" id="greeting">Bom dia</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<input type="submit" class="btn" value="Entrar">
+            </form>
+        </div>
+    </div>
+    
+	<script type="text/javascript">
+		// Script para atualizar a saudação com base na hora atual
+		const greetingElement = document.getElementById('greeting');
+	
+		function updateGreeting() {
+		  const now = new Date();
+		  const currentHour = now.getHours();
+	
+		  if (currentHour >= 0 && currentHour < 12) {
+			greetingElement.textContent = 'Bom dia';
+		  } else if (currentHour >= 12 && currentHour < 18) {
+			greetingElement.textContent = 'Boa tarde';
+		  } else {
+			greetingElement.textContent = 'Boa noite';
+		  }
+		}
+	
+		// Chamamos a função para atualizar a saudação quando a página é carregada
+		updateGreeting();
+	  </script>
+</body>
+</html>

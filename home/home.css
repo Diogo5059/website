@@ -1,0 +1,61 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: hsl(159, 65%, 45%);
+  border-radius: 15px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+li a:hover:not(.active) {
+  background-color: hsl(159, 65%, 40%);
+}
+
+.active {
+  background-color: hsl(244, 31%, 31%);
+}
+
+.header {
+  text-align: center;
+  border-radius: 15px;
+  padding-left: 150px;
+  padding-top: 30px;
+  padding-right: 10px;
+}
+
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.valdorio_logo {
+  position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.topleft {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+}
+        
